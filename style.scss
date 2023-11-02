@@ -1,0 +1,177 @@
+// css reset
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+//variables
+//fonts
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "InterBold";
+  src: url("./assets/fonts/static/Inter-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "InterExtraBold";
+  src: url("./assets/fonts/static/Inter-ExtraBold.ttf") format("truetype");
+}
+
+// mise en page
+body {
+  min-height: 100vh;
+  font-family: "Inter";
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.5em;
+  opacity: 0.8;
+}
+
+#page {
+  width: 90%;
+  margin: 50px auto;
+  max-width: 1000px;
+  @media screen and (min-width: 780px) {
+    width: 80%;
+  }
+}
+
+h1 {
+  font-family: "InterExtraBold";
+  font-size: 3em;
+}
+
+h2 {
+  font-family: "InterBold";
+  font-size: 2em;
+}
+
+h3 {
+  font-family: "InterBold";
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: rgb(233, 71, 54);
+  color: white;
+  letter-spacing: 3px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(231, 105, 91);
+  }
+}
+
+.topContainer {
+  display: flex;
+  gap: 20px;
+  @media screen and (min-width: 780px) {
+  }
+}
+
+.firstArticle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 65%;
+  .firstArticle-title {
+    width: 50%;
+    margin: 20px 0;
+  }
+  .firstArticle-textAndbutton {
+    width: 50%;
+    button {
+      margin-top: 15px;
+    }
+  }
+}
+
+.quickNews {
+  width: 35%;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  h2 {
+    color: rgb(255, 174, 0);
+    margin-bottom: 20px;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.articles {
+  ul {
+    margin-top: 50px;
+    width: 100%;
+    @media screen and (min-width: 780px) {
+      display: flex;
+      img {
+        width: 70px;
+        height: auto;
+        object-fit: cover;
+      }
+      li {
+        display: flex;
+        gap: 20px;
+        h2 {
+          color: rgb(181, 181, 181);
+        }
+      }
+    }
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  ul {
+    display: flex;
+    gap: 20px;
+  }
+}
