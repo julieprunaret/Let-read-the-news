@@ -34,6 +34,11 @@ img {
   height: auto;
 }
 
+a {
+  color: inherit;
+  text-decoration: none; /* no underline */
+}
+
 @font-face {
   font-family: "Inter";
   src: url("./assets/fonts/static/Inter-Regular.ttf") format("truetype");
@@ -142,6 +147,7 @@ button:hover {
 @media screen and (min-width: 780px) {
   .articles ul {
     display: flex;
+    gap: 10px;
   }
   .articles ul img {
     width: 70px;
@@ -154,7 +160,12 @@ button:hover {
     gap: 20px;
   }
   .articles ul li h2 {
+    cursor: pointer;
     color: rgb(181, 181, 181);
+  }
+  .articles ul li h2:hover {
+    color: rgb(217, 83, 69);
+    opacity: 1;
   }
 }
 
@@ -167,4 +178,19 @@ nav {
 nav ul {
   display: flex;
   gap: 20px;
+}
+nav ul li {
+  cursor: pointer;
+}
+nav ul li:hover {
+  opacity: 0.5;
+}
+
+.attribution {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 12px;
+}
+.attribution .author {
+  font-family: "InterBold";
 }/*# sourceMappingURL=style.css.map */

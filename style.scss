@@ -35,6 +35,11 @@ img {
   height: auto;
 }
 
+a {
+  color: inherit;
+  text-decoration: none; /* no underline */
+}
+
 //variables
 //fonts
 @font-face {
@@ -149,6 +154,7 @@ button {
     width: 100%;
     @media screen and (min-width: 780px) {
       display: flex;
+      gap: 10px;
       img {
         width: 70px;
         height: auto;
@@ -158,7 +164,12 @@ button {
         display: flex;
         gap: 20px;
         h2 {
+          cursor: pointer;
           color: rgb(181, 181, 181);
+          &:hover {
+            color: rgb(217, 83, 69);
+            opacity: 1;
+          }
         }
       }
     }
@@ -173,5 +184,20 @@ nav {
   ul {
     display: flex;
     gap: 20px;
+    li {
+      cursor: pointer;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.attribution {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 12px;
+  .author {
+    font-family: "InterBold";
   }
 }
