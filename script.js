@@ -40,3 +40,17 @@ fetchMoviesJSON().then((articles) => {
     `;
   });
 });
+
+const showMenu = () => {
+  const menuButton = document.getElementById("menu_button");
+  const menu = document.querySelector(".menu");
+  const menuIcon = document.querySelector(".menu_icon");
+  menuButton.addEventListener("click", () => {
+    menu.classList.toggle("open");
+    menu.classList.contains("open")
+      ? (menuIcon.src = "assets/images/icon-menu-close.svg")
+      : (menuIcon.src = "assets/images/icon-menu.svg");
+  });
+};
+
+showMenu();

@@ -193,21 +193,58 @@ button:hover {
   }
 }
 
-nav {
+.menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 80px;
 }
-nav ul {
-  display: flex;
-  gap: 20px;
+.menu .list .menu_icon {
+  display: block;
 }
-nav ul li {
-  cursor: pointer;
+.menu .list li {
+  display: none;
 }
-nav ul li:hover {
-  opacity: 0.5;
+@media screen and (max-width: 780px) {
+  .menu .logo {
+    align-self: flex-start;
+  }
+  .menu .menu_icon {
+    align-self: flex-start;
+    margin-top: 10px;
+  }
+  .menu.open {
+    height: 300px;
+  }
+  .menu.open .list {
+    align-self: end;
+    margin: 30px 30px 50px 30px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu.open .list li {
+    display: block;
+  }
+}
+@media screen and (min-width: 780px) {
+  .menu {
+    height: 100px;
+  }
+  .menu .menu_icon {
+    display: none;
+  }
+  .menu .list {
+    display: flex;
+    gap: 20px;
+  }
+  .menu .list li {
+    display: block;
+    cursor: pointer;
+  }
+  .menu .list li:hover {
+    opacity: 0.5;
+  }
 }
 
 .attribution {
