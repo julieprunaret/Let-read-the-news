@@ -110,8 +110,10 @@ button {
 
 .topContainer {
   display: flex;
+  flex-direction: column;
   gap: 20px;
   @media screen and (min-width: 780px) {
+    flex-direction: row;
   }
 }
 
@@ -119,21 +121,28 @@ button {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 65%;
   .firstArticle-title {
-    width: 50%;
     margin: 20px 0;
   }
   .firstArticle-textAndbutton {
-    width: 50%;
     button {
       margin-top: 15px;
     }
   }
+  @media screen and (min-width: 780px) {
+    .firstArticle-title {
+      width: 50%;
+    }
+    .firstArticle-textAndbutton {
+      width: 50%;
+    }
+    width: 65%;
+  }
 }
 
 .quickNews {
-  width: 35%;
+  margin-top: 20px;
+
   background-color: black;
   color: white;
   padding: 20px;
@@ -146,32 +155,41 @@ button {
     flex-direction: column;
     gap: 10px;
   }
+  @media screen and (min-width: 780px) {
+    width: 35%;
+    margin-top: 0px;
+  }
 }
 
 .articles {
   ul {
     margin-top: 50px;
     width: 100%;
-    @media screen and (min-width: 780px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    img {
+      width: 15%;
+      height: 120px;
+      object-fit: cover;
+    }
+    li {
       display: flex;
-      gap: 10px;
-      img {
-        width: 70px;
-        height: auto;
-        object-fit: cover;
-      }
-      li {
-        display: flex;
-        gap: 20px;
-        h2 {
-          cursor: pointer;
-          color: rgb(181, 181, 181);
-          &:hover {
-            color: rgb(217, 83, 69);
-            opacity: 1;
-          }
+      gap: 20px;
+      h2 {
+        cursor: pointer;
+        color: rgb(181, 181, 181);
+        &:hover {
+          color: rgb(217, 83, 69);
+          opacity: 1;
         }
       }
+    }
+    @media screen and (min-width: 780px) {
+      img {
+        width: 70px;
+      }
+      flex-direction: row;
     }
   }
 }

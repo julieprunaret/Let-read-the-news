@@ -105,27 +105,40 @@ button:hover {
 
 .topContainer {
   display: flex;
+  flex-direction: column;
   gap: 20px;
 }
+@media screen and (min-width: 780px) {
+  .topContainer {
+    flex-direction: row;
+  }
+}
+
 .firstArticle {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 65%;
 }
 .firstArticle .firstArticle-title {
-  width: 50%;
   margin: 20px 0;
-}
-.firstArticle .firstArticle-textAndbutton {
-  width: 50%;
 }
 .firstArticle .firstArticle-textAndbutton button {
   margin-top: 15px;
 }
+@media screen and (min-width: 780px) {
+  .firstArticle {
+    width: 65%;
+  }
+  .firstArticle .firstArticle-title {
+    width: 50%;
+  }
+  .firstArticle .firstArticle-textAndbutton {
+    width: 50%;
+  }
+}
 
 .quickNews {
-  width: 35%;
+  margin-top: 20px;
   background-color: black;
   color: white;
   padding: 20px;
@@ -139,33 +152,44 @@ button:hover {
   flex-direction: column;
   gap: 10px;
 }
+@media screen and (min-width: 780px) {
+  .quickNews {
+    width: 35%;
+    margin-top: 0px;
+  }
+}
 
 .articles ul {
   margin-top: 50px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.articles ul img {
+  width: 15%;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.articles ul li {
+  display: flex;
+  gap: 20px;
+}
+.articles ul li h2 {
+  cursor: pointer;
+  color: rgb(181, 181, 181);
+}
+.articles ul li h2:hover {
+  color: rgb(217, 83, 69);
+  opacity: 1;
 }
 @media screen and (min-width: 780px) {
   .articles ul {
-    display: flex;
-    gap: 10px;
+    flex-direction: row;
   }
   .articles ul img {
     width: 70px;
-    height: auto;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .articles ul li {
-    display: flex;
-    gap: 20px;
-  }
-  .articles ul li h2 {
-    cursor: pointer;
-    color: rgb(181, 181, 181);
-  }
-  .articles ul li h2:hover {
-    color: rgb(217, 83, 69);
-    opacity: 1;
   }
 }
 

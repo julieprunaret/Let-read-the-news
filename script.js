@@ -10,11 +10,9 @@ const fetchMoviesJSON = async () => {
 
 fetchMoviesJSON().then((articles) => {
   articles = articles.articles;
-  console.log(articles); // fetched artciles
+  console.log(articles); // fetched articles
   let articleNumber = 0;
   articles.slice(0, 3).map((article) => {
-    // theArticle = document.createElement("li");
-    // articlesBox.appendChild(theArticle);
     articleNumber += 1;
     let description = article.description.substr(0, 50);
     let title = article.title.substr(0, 20);
@@ -40,7 +38,5 @@ fetchMoviesJSON().then((articles) => {
       </a >
     </li>
     `;
-
-    // theArticle.innerText = article.title;
   });
 });
